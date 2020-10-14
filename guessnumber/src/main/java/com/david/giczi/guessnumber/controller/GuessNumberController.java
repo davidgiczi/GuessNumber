@@ -17,10 +17,9 @@ public class GuessNumberController {
 	private GuessNumberService service;
 
 	@RequestMapping(value = "/guessnumber")
-	public String startGame(HttpSession session, Model model) {
+	public String startGame(HttpSession session) {
 
-		int theNumber = service.randNumber();
-		session.setAttribute("task", theNumber);
+		session.setAttribute("task", service.randNumber());
 		session.setAttribute("inputStore", "[]");
 		
 		return "gameboard";

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>GuessNumber Game</title>
+<link th:href="@{/css/style.css}"  rel="stylesheet">
+</head>
+<body>
+
+<h1>Találj ki egy számot 1 és 100 között!</h1>
+
+<form th:action="@{/guessnumber/send}" method="post">
+<input type="text" name="tipp">
+<input type="submit" value="Küldés">
+</form>
+
+<div th:if="${newgame == 'false'}">
+<h3 th:text="${message}"></h3>
+</div>
+
+<div th:if="${newgame == 'true'}">
+<h3 th:text="${message}"></h3>
+
+<form th:action="@{/guessnumber}" method="post">
+<input type="submit" value="Új játék">
+</form>
+
+</div>
+</body>
+
+
+
+</html>

@@ -1,0 +1,4 @@
+com\david\giczi\guessnumber\controller\GuessNumberController.class
+com\david\giczi\guessnumber\GuessnumberApplication.class
+com\david\giczi\guessnumber\service\GuessNumberServiceImpl.class
+com\david\giczi\guessnumber\service\GuessNumberService.class
